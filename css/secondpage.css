@@ -1,0 +1,105 @@
+/* Variables */
+:root {
+    --default-text-color: #fff;
+    --page-background-image:url("https://us.123rf.com/450wm/peshkov/peshkov2211/peshkov221100220/193732408-blogging-and-streaming-concept-with-many-digital-life-style-screens-on-abstract-blue-background.jpg?ver=6");
+    --card-text-color: rgb(232, 233, 243);
+    --info-color: #7dabef;
+  }
+  
+  body {
+    background-image: var(--page-background-image);
+    color: var(--default-text-color);
+    background-size: contain;
+    background-repeat:repeat;
+     background-position:center; 
+  }
+  
+  /* NAVBAR STARTS */
+  .fa-star {
+    color: green !important;
+  }
+  
+  .site-name {
+    
+    position: absolute;
+    top: 0px;
+    color:rgb(234, 52, 11);
+    position: absolute;
+    top: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    }
+  .text-small{
+      color:#0baaef;
+      font-weight: small;
+      font-size:small;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+    } 
+
+    .btn:hover{
+      background-color: #0bef35;
+
+    }
+  /* NAVBAR ENDS */
+  
+  /* MOVIE CARD FOR EACH MOVIE*/
+  .card {
+    border: 0;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(101, 219, 12) 0%,
+      rgb(64, 64, 64) 90.2%
+    );
+    box-shadow: 0px 16px 24px 2px hsla(0, 0%, 0%, 0.14),
+      0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
+      0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
+  }
+  
+  .card-text {
+    text-align: justify;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--card-text-color);
+    text-transform:capitalize;
+  }
+  
+  .info-type {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--logo-color);
+  }
+  
+  .information {
+    font-weight: 500;
+    font-size: 0.9em;
+    color: var(--info-color);
+  }
+  
+  
+  /* BREAKPOINTS */
+  @media screen and (max-width: 767px) {
+    #poster {
+      margin-top: 1rem;
+      border-radius: 5px !important;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    #title {
+      font-size: x-large;
+    }
+  
+    h6 {
+      font-size: medium;
+    }
+  
+    h5 {
+      font-size: medium;
+    }
+  
+    #poster {
+      margin-top: 0px;
+      width: 100%;
+    }
+  }

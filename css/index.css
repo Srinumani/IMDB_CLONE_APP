@@ -1,0 +1,361 @@
+ /* CSS Variables */
+:root {
+    --default-text-color:white;
+    --logo-color: rgb(28, 182, 46);
+    --page-background-image:url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876023.jpg");
+    --form-color: rgb(26, 37, 52);
+    --search-icon-color: #3d3e43;
+    --favourite-section-color: rgb(28, 27, 27);
+    --fav-movie-card-color: rgb(12, 11, 11);
+    --delete-button-color: #eb6582;
+  }
+  
+  body {
+    background-image: var(--page-background-image);
+    color: var(--default-text-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:0%;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* NAVBAR */
+  
+  .site-name {
+    color:rgb(168, 221, 22);
+    position: absolute;
+    top: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+  }
+   .text-small{
+    color:#df491f;
+    font-weight: small;
+    font-size:small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  } 
+  
+  #search-bar {
+    height: 40px;
+    width: 50vw;
+  }
+  
+  form {
+    width: inherit;
+    background-color: var(--form-color);
+    border-radius: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgb(3, 17, 27);
+  }
+  
+  input {
+    width: 90%;
+    height: 2.5rem;
+    outline: none;
+    padding: 1.5rem;
+    border: 0;
+   background-color:  transparent;
+    color: var(--default-text-color);
+  }
+  
+  ::placeholder {
+    opacity: 0.5;
+    color: white;
+    font-weight: bold;
+  }
+  
+   
+  
+  .search-icon {
+    font-size: 25px;
+    color: var(--search-icon-color);
+    cursor:pointer;
+  }
+  
+  #show-favourites {
+    display: none;
+    font-size: 1.7rem;
+  }
+  
+  /* MAIN SECTION */
+  
+  #main-section {
+    min-height: 89vh;
+    width: 65%;
+  }
+  
+  h2 {
+    padding-left: 0.5rem;
+    margin: 2% 4%;
+    color: var(--logo-color);
+  }
+  
+  #Suggestions-container {
+    min-height: 100%;
+    justify-content: center;
+    padding: 2rem;
+  }
+  #Suggestions-container #empty-search-text{
+    text-transform: capitalize;
+    color:#bccd1f;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+  }
+  
+  /* card  */
+  
+  a {
+    box-sizing: border-box;
+  }
+  
+  .movieCardContainer{
+    width: inherit;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    
+    
+  }
+
+   
+  .card {
+    border: transparent;
+    background-color: rgb(18, 59, 3);
+    width: 15rem;
+    transform:scale(1);    
+    transition:ease-in-out;
+    box-shadow:1px 1px 10px rgb(239, 244, 190);
+  }
+  .card:hover{
+    transform:scale(1.2); 
+
+  }
+   
+  
+  .card > img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .card-title {
+    font-size: medium;
+    font-weight: 500;
+  }
+  
+  .card-title a {
+    text-decoration: none;
+    color: var(--default-text-color);
+  }
+  
+  .card-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .fa-star {
+    color: yellow;
+  }
+  
+  .text-decoration {
+    text-decoration: none;
+  }
+  
+  #rating {
+    color: var(--default-text-color);
+    font-size: small;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  
+  .fav-btn {
+    border: transparent;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .fa-heart {
+    color: white;
+  }
+  
+  .fa-heart:active {
+    color: red;
+  }
+  
+  /* FAVORITES SECTION */
+  
+  #favorites-section {
+    width: 33%;
+    height: 100vh;
+    background-color: var(--favourite-section-color);
+    z-index: 1;
+    flex-direction: column;
+  }
+  
+  #empty-fav-text {
+    margin-top: 40%;
+    margin-left: 15%;
+  }
+  
+  .favouriteMovies {
+    overflow-y: scroll;
+    width: 90%;
+    height: 90%;
+    margin-left: 10%;
+  
+    
+  }
+  
+  /* Scrollbar customisation */
+  
+  .favouriteMovies::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .favouriteMovies::-webkit-scrollbar-track {
+    border-radius: 20px;
+  }
+  
+  /* Handle */
+  .favouriteMovies::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+  }
+  
+  .fav-movie-card {
+    padding-right: 1rem;
+    width: 95%;
+    background-color: var(--fav-movie-card-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .fav-movie-poster {
+    width: 80px;
+    height: 100px;
+  }
+  
+  .fav-movie-name {
+    text-decoration: none;
+    color: var(--default-text-color);
+  }
+  
+  .fav-movie-name:hover {
+    color: var(--default-text-color);
+    text-decoration: underline;
+  }
+  
+  .movie-card-details {
+    width: 60%;
+  }
+  
+  .delete-btn {
+    cursor: pointer;
+  }
+  
+  .fa-trash-can {
+    color: var(--delete-button-color);
+    font-size: 1.3rem;
+  }
+  
+  .fa-trash-can:hover {
+    color: var(--heart-red-color);
+  }
+  
+  /* Responsiveness */
+  
+  @media screen and (max-width: 1200px) {
+    .movieCardContainer  {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .movieCardContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    #favorites-section {
+      width: 40vw;
+      height: 100vh;
+    }
+  
+    .movieCardContainer  {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .card {
+      width: 8rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .site-name {
+      display: none;
+    }
+  
+    #favorites-section {
+      display: none;
+      position: absolute;
+      right: 0;
+      width: 60vw;
+      height: 100vh;
+    }
+  
+    #show-favourites {
+      padding-right: 1rem;
+      display: block;
+    }
+  
+    #main-section {
+      min-height: 100vh;
+      width: 100vw;
+    }
+  
+    .movieCardContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    #search-bar {
+      margin-left: 3%;
+      height: 35px;
+      width: 55vw;
+      padding-bottom: 2.5rem;
+    }
+  
+    #show-favourites {
+      padding-right: 0.1rem;
+    }
+  
+    .movieCardContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card {
+      width: 9rem;
+    }
+  
+    #favorites-section {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
